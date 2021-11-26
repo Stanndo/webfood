@@ -46,6 +46,21 @@ ul {
   text-transform: uppercase;
 }
 
+.menu-btn {
+  width: 3rem; 
+  height: 3rem; 
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-around;
+  display: none;
+}
+
+.menu-btn span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
 #main-header ul {
   display: flex;
 }
@@ -63,6 +78,44 @@ ul {
   color: rgb(228, 163, 44);
 }
 
+#side-menu {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 26, 27);
+  position: fixed;
+  top: 0;
+  left: 0; 
+  display: none;
+}
+
+#side-menu header {
+  height: 5rem;
+  background-color: rgb(29, 26, 24);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 5%;
+}
+
+#side-menu:target {    /* this checks if we had this id on the browser url */
+  display: block;
+}
+
+#side-menu ul {
+  display: flex;
+  padding: 4rem 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+#side-menu li {
+  margin: 1rem 0;
+}
+
+#side-menu a {
+  color: rgb(253, 239, 213);
+  font-size: 2rem;
+}
 /* --------- main section rules --------------- */
 
 main h1 {
@@ -119,6 +172,10 @@ section ul {
 @media (max-width: 48rem) {
   #main-header nav {
     display: none;
+  }
+
+  .menu-btn {
+    display: flex;
   }
 
   main h1 {
