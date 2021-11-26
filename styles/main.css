@@ -47,8 +47,8 @@ ul {
 }
 
 .menu-btn {
-  width: 3rem; 
-  height: 3rem; 
+  width: 3rem;
+  height: 3rem;
   /* display: flex; */
   flex-direction: column;
   justify-content: space-around;
@@ -84,7 +84,7 @@ ul {
   background-color: rgb(29, 26, 27);
   position: fixed;
   top: 0;
-  left: 0; 
+  left: 0;
   display: none;
 }
 
@@ -95,10 +95,6 @@ ul {
   align-items: center;
   justify-content: flex-end;
   padding: 0 5%;
-}
-
-#side-menu:target {    /* this checks if we had this id on the browser url */
-  display: block;
 }
 
 #side-menu ul {
@@ -172,6 +168,11 @@ section ul {
 @media (max-width: 48rem) {
   #main-header nav {
     display: none;
+  }
+
+  /* this checks if we had this id on the browser url */
+  #side-menu:target {
+    display: block;
   }
 
   .menu-btn {
